@@ -21,5 +21,12 @@ public class Main {
 
             tokens = scanner.nextLine().split(",\\s+");
         }
+
+        shops.forEach((key, value) -> {
+            System.out.printf("%s ->%n", key);
+            value.forEach((key1, value1) -> {
+                System.out.printf("Product: %s, Price: %.1f%n", key1, value1);
+            });
+        });
     }
 }
