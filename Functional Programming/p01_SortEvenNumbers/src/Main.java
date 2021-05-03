@@ -20,5 +20,6 @@ public class Main {
         }
 
         System.out.println("The even numbers are: " + (collect.isEmpty() ? "none" : collect));
+        scanner.close();
     }
 }
