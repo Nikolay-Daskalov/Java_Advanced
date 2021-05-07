@@ -16,4 +16,8 @@ public class Jar<T> {
     public T remove() {
         return this.deque.pop();
     }
+
+    public boolean isEmpty(){
+        return this.deque.isEmpty();
+    }
 }
