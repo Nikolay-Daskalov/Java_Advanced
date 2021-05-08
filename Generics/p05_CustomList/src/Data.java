@@ -27,7 +27,7 @@ public class Data<T extends Comparable<T>> {
         this.list.set(index2, value1);
     }
 
-    public long countGreaterThan(T value) {
+    public long countGreaterThan(final T value) {
         return this.list.stream().filter(v -> v.compareTo(value) > 0).count();
     }
 

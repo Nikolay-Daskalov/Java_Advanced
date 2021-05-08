@@ -40,7 +40,6 @@ public class Main {
 
             input = reader.readLine();
         }
-
         reader.close();
     }
 }
