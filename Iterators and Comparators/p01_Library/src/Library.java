@@ -1,4 +1,4 @@
-import java.util.Iterator;
+import java.util.*;
 
 public class Library implements Iterable<Book> {
     private Book[] books;
@@ -15,6 +15,11 @@ public class Library implements Iterable<Book> {
     @Override
     public Iterator<Book> iterator() {
         return new LibraryIterator();
+    }
+
+    public void sort() {
+        this.books = Arrays.stream(this.books).sorted(new BookComparator())
+                .toArray(Book[]::new);
     }
 
     private class LibraryIterator implements Iterator<Book> {
